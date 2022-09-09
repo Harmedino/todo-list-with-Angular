@@ -1,15 +1,15 @@
-<app-nav></app-nav>
-
 <h1 class="ml-5 text-success">To-DO List</h1>
 
 <div class="container">
   <div class="form-group">
-    <input type="text" [(ngModel)]="message" />
-    <button class="btn btn-primary" (click)="add()">
+    <input type="text" [(ngModel)]="message" class="p-3" />
+    <button class="btn btn-primary p-3" (click)="add()">
       <i class="fa fa-plus"></i> Add
     </button>
 
-    <table class="mt-4 table w-too table-stripe">
+    <table
+      class="mt-4 table w-too table-stripe table-dark table-boardered mt-5"
+    >
       <tbody>
         <tr
           *ngFor="let item of array; let i = index"

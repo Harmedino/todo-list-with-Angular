@@ -8,11 +8,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'myapp';
 
-  message = '';
+  message: any = '';
   array: any = [];
+
   add() {
-    this.array.push({ name: this.message, done: false });
+    if (this.message == '') {
+      alert('input this field');
+      return;
+    } else {
+      this.array.push({ name: this.message, done: false });
+    }
   }
+
   del(i: any) {
     this.array.splice(i, 1);
   }
